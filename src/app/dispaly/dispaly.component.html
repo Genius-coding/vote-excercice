@@ -1,0 +1,6 @@
+<app-voter [answerNo]="answerNo" [answerYes]="answerYes"
+[question]="question" (output)="getResult($event)"></app-voter>
+<div *ngIf="result; else displayNo">{{answerYes}}</div>
+<ng-template #displayNo>
+    <p>{{answerNo}}</p>
+</ng-template>
